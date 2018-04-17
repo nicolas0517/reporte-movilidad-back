@@ -1,0 +1,1206 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /categoria_movilidad/:
+    get:
+      tags:
+      - categoria_movilidad
+      description: get CategoriaMovilidad
+      operationId: CategoriaMovilidadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CategoriaMovilidad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - categoria_movilidad
+      description: create CategoriaMovilidad
+      operationId: CategoriaMovilidadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for CategoriaMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CategoriaMovilidad'
+      responses:
+        "201":
+          description: '{int} models.CategoriaMovilidad'
+        "403":
+          description: body is empty
+  /categoria_movilidad/{id}:
+    get:
+      tags:
+      - categoria_movilidad
+      description: get CategoriaMovilidad by id
+      operationId: CategoriaMovilidadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CategoriaMovilidad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - categoria_movilidad
+      description: update the CategoriaMovilidad
+      operationId: CategoriaMovilidadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for CategoriaMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.CategoriaMovilidad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.CategoriaMovilidad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - categoria_movilidad
+      description: delete the CategoriaMovilidad
+      operationId: CategoriaMovilidadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /clasificacion_duracion/:
+    get:
+      tags:
+      - clasificacion_duracion
+      description: get ClasificacionDuracion
+      operationId: ClasificacionDuracionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionDuracion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - clasificacion_duracion
+      description: create ClasificacionDuracion
+      operationId: ClasificacionDuracionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ClasificacionDuracion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ClasificacionDuracion'
+      responses:
+        "201":
+          description: '{int} models.ClasificacionDuracion'
+        "403":
+          description: body is empty
+  /clasificacion_duracion/{id}:
+    get:
+      tags:
+      - clasificacion_duracion
+      description: get ClasificacionDuracion by id
+      operationId: ClasificacionDuracionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionDuracion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - clasificacion_duracion
+      description: update the ClasificacionDuracion
+      operationId: ClasificacionDuracionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ClasificacionDuracion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ClasificacionDuracion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionDuracion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - clasificacion_duracion
+      description: delete the ClasificacionDuracion
+      operationId: ClasificacionDuracionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /clasificacion_movilidad/:
+    get:
+      tags:
+      - clasificacion_movilidad
+      description: get ClasificacionMovilidad
+      operationId: ClasificacionMovilidadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionMovilidad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - clasificacion_movilidad
+      description: create ClasificacionMovilidad
+      operationId: ClasificacionMovilidadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ClasificacionMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ClasificacionMovilidad'
+      responses:
+        "201":
+          description: '{int} models.ClasificacionMovilidad'
+        "403":
+          description: body is empty
+  /clasificacion_movilidad/{id}:
+    get:
+      tags:
+      - clasificacion_movilidad
+      description: get ClasificacionMovilidad by id
+      operationId: ClasificacionMovilidadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionMovilidad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - clasificacion_movilidad
+      description: update the ClasificacionMovilidad
+      operationId: ClasificacionMovilidadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ClasificacionMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ClasificacionMovilidad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ClasificacionMovilidad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - clasificacion_movilidad
+      description: delete the ClasificacionMovilidad
+      operationId: ClasificacionMovilidadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /convenio/:
+    get:
+      tags:
+      - convenio
+      description: get Convenio
+      operationId: ConvenioController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Convenio'
+        "403":
+          description: ""
+    post:
+      tags:
+      - convenio
+      description: create Convenio
+      operationId: ConvenioController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Convenio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Convenio'
+      responses:
+        "201":
+          description: '{int} models.Convenio'
+        "403":
+          description: body is empty
+  /convenio/{id}:
+    get:
+      tags:
+      - convenio
+      description: get Convenio by id
+      operationId: ConvenioController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Convenio'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - convenio
+      description: update the Convenio
+      operationId: ConvenioController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Convenio content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Convenio'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Convenio'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - convenio
+      description: delete the Convenio
+      operationId: ConvenioController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /movilidad/:
+    get:
+      tags:
+      - movilidad
+      description: get Movilidad
+      operationId: MovilidadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Movilidad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - movilidad
+      description: create Movilidad
+      operationId: MovilidadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Movilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Movilidad'
+      responses:
+        "201":
+          description: '{int} models.Movilidad'
+        "403":
+          description: body is empty
+  /movilidad/{id}:
+    get:
+      tags:
+      - movilidad
+      description: get Movilidad by id
+      operationId: MovilidadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Movilidad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - movilidad
+      description: update the Movilidad
+      operationId: MovilidadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Movilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Movilidad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Movilidad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - movilidad
+      description: delete the Movilidad
+      operationId: MovilidadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /presupuesto/:
+    get:
+      tags:
+      - presupuesto
+      description: get Presupuesto
+      operationId: PresupuestoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Presupuesto'
+        "403":
+          description: ""
+    post:
+      tags:
+      - presupuesto
+      description: create Presupuesto
+      operationId: PresupuestoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Presupuesto content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Presupuesto'
+      responses:
+        "201":
+          description: '{int} models.Presupuesto'
+        "403":
+          description: body is empty
+  /presupuesto/{id}:
+    get:
+      tags:
+      - presupuesto
+      description: get Presupuesto by id
+      operationId: PresupuestoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Presupuesto'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - presupuesto
+      description: update the Presupuesto
+      operationId: PresupuestoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Presupuesto content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Presupuesto'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Presupuesto'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - presupuesto
+      description: delete the Presupuesto
+      operationId: PresupuestoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_movilidad/:
+    get:
+      tags:
+      - tipo_movilidad
+      description: get TipoMovilidad
+      operationId: TipoMovilidadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoMovilidad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_movilidad
+      description: create TipoMovilidad
+      operationId: TipoMovilidadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoMovilidad'
+      responses:
+        "201":
+          description: '{int} models.TipoMovilidad'
+        "403":
+          description: body is empty
+  /tipo_movilidad/{id}:
+    get:
+      tags:
+      - tipo_movilidad
+      description: get TipoMovilidad by id
+      operationId: TipoMovilidadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoMovilidad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_movilidad
+      description: update the TipoMovilidad
+      operationId: TipoMovilidadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoMovilidad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoMovilidad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoMovilidad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_movilidad
+      description: delete the TipoMovilidad
+      operationId: TipoMovilidadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_persona/:
+    get:
+      tags:
+      - tipo_persona
+      description: get TipoPersona
+      operationId: TipoPersonaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPersona'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_persona
+      description: create TipoPersona
+      operationId: TipoPersonaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoPersona content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPersona'
+      responses:
+        "201":
+          description: '{int} models.TipoPersona'
+        "403":
+          description: body is empty
+  /tipo_persona/{id}:
+    get:
+      tags:
+      - tipo_persona
+      description: get TipoPersona by id
+      operationId: TipoPersonaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPersona'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_persona
+      description: update the TipoPersona
+      operationId: TipoPersonaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoPersona content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPersona'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPersona'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_persona
+      description: delete the TipoPersona
+      operationId: TipoPersonaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_presupuesto/:
+    get:
+      tags:
+      - tipo_presupuesto
+      description: get TipoPresupuesto
+      operationId: TipoPresupuestoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPresupuesto'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_presupuesto
+      description: create TipoPresupuesto
+      operationId: TipoPresupuestoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoPresupuesto content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPresupuesto'
+      responses:
+        "201":
+          description: '{int} models.TipoPresupuesto'
+        "403":
+          description: body is empty
+  /tipo_presupuesto/{id}:
+    get:
+      tags:
+      - tipo_presupuesto
+      description: get TipoPresupuesto by id
+      operationId: TipoPresupuestoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPresupuesto'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_presupuesto
+      description: update the TipoPresupuesto
+      operationId: TipoPresupuestoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoPresupuesto content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPresupuesto'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPresupuesto'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_presupuesto
+      description: delete the TipoPresupuesto
+      operationId: TipoPresupuestoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.CategoriaMovilidad:
+    title: CategoriaMovilidad
+    type: object
+    properties:
+      Descripcion:
+        type: string
+      Disponible:
+        type: boolean
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.ClasificacionDuracion:
+    title: ClasificacionDuracion
+    type: object
+    properties:
+      Criterio:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.ClasificacionMovilidad:
+    title: ClasificacionMovilidad
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.Convenio:
+    title: Convenio
+    type: object
+    properties:
+      Descripcion:
+        type: string
+      Disponible:
+        type: boolean
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.Movilidad:
+    title: Movilidad
+    type: object
+    properties:
+      AreaConocimiento:
+        type: string
+      CategoriaMovilidad:
+        $ref: '#/definitions/models.CategoriaMovilidad'
+      ClasificacionDuracion:
+        $ref: '#/definitions/models.ClasificacionDuracion'
+      ClasificacionMovilidad:
+        $ref: '#/definitions/models.ClasificacionMovilidad'
+      ConceptoParticipacion:
+        type: string
+      Convenio:
+        $ref: '#/definitions/models.Convenio'
+      Dependencia:
+        type: integer
+        format: int64
+      EnlaceActoAdministrativo:
+        type: string
+      FechaFin:
+        type: string
+      FechaInicio:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Institucion:
+        type: integer
+        format: int64
+      NombreActoAdministrativo:
+        type: string
+      Pais:
+        type: integer
+        format: int64
+      Persona:
+        type: integer
+        format: int64
+      TipoMovilidad:
+        $ref: '#/definitions/models.TipoMovilidad'
+      TipoPersona:
+        $ref: '#/definitions/models.TipoPersona'
+  models.Presupuesto:
+    title: Presupuesto
+    type: object
+    properties:
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Movilidad:
+        $ref: '#/definitions/models.Movilidad'
+      TipoPresupuesto:
+        $ref: '#/definitions/models.TipoPresupuesto'
+  models.TipoMovilidad:
+    title: TipoMovilidad
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.TipoPersona:
+    title: TipoPersona
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.TipoPresupuesto:
+    title: TipoPresupuesto
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+tags:
+- name: tipo_movilidad
+  description: |
+    TipoMovilidadController operations for TipoMovilidad
+- name: clasificacion_duracion
+  description: |
+    ClasificacionDuracionController operations for ClasificacionDuracion
+- name: categoria_movilidad
+  description: |
+    CategoriaMovilidadController operations for CategoriaMovilidad
+- name: tipo_presupuesto
+  description: |
+    TipoPresupuestoController operations for TipoPresupuesto
+- name: presupuesto
+  description: |
+    PresupuestoController operations for Presupuesto
+- name: convenio
+  description: |
+    ConvenioController operations for Convenio
+- name: tipo_persona
+  description: |
+    TipoPersonaController operations for TipoPersona
+- name: clasificacion_movilidad
+  description: |
+    ClasificacionMovilidadController operations for ClasificacionMovilidad
+- name: movilidad
+  description: |
+    MovilidadController operations for Movilidad
